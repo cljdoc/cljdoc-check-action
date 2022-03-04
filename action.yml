@@ -1,0 +1,30 @@
+# ref: https://help.github.com/en/actions/building-actions/metadata-syntax-for-github-actions
+name: CljDoc Check Action
+description: Check that CljDoc will be able to analyze the project successfully 
+
+author: Jakub Holý
+
+branding:
+  color: blue
+  icon: check-square
+
+inputs:
+  action:
+    required: false
+    description: 'The check action to run - analyze-local for deps-based projects, analyze for others'
+    default: 'analyze-local'
+  mvn_project:
+    required: false
+    description: 'Required for `analyze` - the maven group-id/project-id of the library to check; ex.: io.aviso/pretty'
+  mvn_version:
+    required: false
+    description: 'Required for `analyze` - the maven version of the library to check; ex.: 0.1.29-SNAPSHOT'
+
+
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - -e action=${{ inputs.action }}
+    - -e mvn_project=${{ inputs.mvn_project }}
+    - -e mvn_version=${{ inputs.mvn_version }}
