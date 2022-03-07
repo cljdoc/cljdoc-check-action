@@ -2,7 +2,9 @@
 
 GitHub Action for checking that CljDoc will be able to analyze the project successfully
 
-NOTE: CljDoc only works on the JAR archive of the library so you need to build it first.
+NOTE: Currently it only checks for successful analysis of the source codes. Import of articles is not verified yet.
+
+IMPORTANT: CljDoc only works on the JAR archive of the library so you need to build it first.
 
 Checking a clojure-deps based library is as simple as:
 
