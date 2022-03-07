@@ -19,6 +19,7 @@ inputs:
   mvn_version:
     required: false
     description: 'Required for `analyze` - the maven version of the library to check; ex.: 0.1.29-SNAPSHOT'
+    default: LATEST
 
 
 runs:

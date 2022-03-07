@@ -29,5 +29,5 @@ For other types of libraries, you need to install these into the local Maven rep
     uses: cljdoc/cljdoc-check-action@v1
     with:
       mvn_project: io.aviso/pretty
-      mvn_version: LATEST
+      mvn_version: LATEST # this is the default
 ```
