@@ -33,3 +33,7 @@ For other types of libraries, you need to install these into the local Maven rep
       mvn_project: io.aviso/pretty
       mvn_version: LATEST # this is the default
 ```
+
+## Development
+
+The cljdoc changes supporting this action were originally introduced in cljdoc/cljdoc-analyzer#44
