@@ -37,3 +37,11 @@ For other types of libraries, you need to install these into the local Maven rep
 ## Development
 
 The cljdoc changes supporting this action were originally introduced in cljdoc/cljdoc-analyzer#44
+
+Running the action locally:
+
+```bash
+cljdoc-check-action$ docker build -t cljdoc-check-action .
+cljdoc-check-action$ cd ../my-library; clojure -T:build jar
+my-library$ docker run --rm -ti --volume `pwd`:/tmp/prj --workdir /tmp/prj cljdoc-check-action
+```
