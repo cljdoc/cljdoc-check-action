@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name Build target/<the lib>*.jar so that CljDoc analyze can use it:
-        run: clojure -T:build jar # REPALCE with whatever you do to build your jar
+        run: clojure -T:build jar # REPLACE with whatever you do to build your jar
       - name: CljDoc Check
           uses: cljdoc/cljdoc-check-action@v1
 ```
@@ -26,7 +26,7 @@ For other types of libraries, you need to install these into the local Maven rep
 
 ```yaml
 # inside jobs.<name>.steps
-- run: lein install # or whatever is usitable for your build tool/project, to install the library into a maven repo
+- run: lein install # or whatever is suitable for your build tool/project, to install the library into a maven repo
 - name: CljDoc Check
     uses: cljdoc/cljdoc-check-action@v1
     with:
